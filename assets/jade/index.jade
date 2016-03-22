@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+	title Agency Theme
+	link(href="https://fonts.googleapis.com/css?family=Kaushan+Script", rel="stylesheet", type="text/css")
+	link(href="assets/font-awesome/css/font-awesome.min.css", rel="stylesheet")
+	link(href="assets/css/bootstrap.css", rel="stylesheet")
+	link(href="assets/css/main.css", rel="stylesheet")
+body
+	-var textotimeline= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae."
+	-var subtitulo="Lorem ipsum dolor sit amet, consectetur."
+
+
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container
+			.navbar-header
+				button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar-collapse-1")
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href="#").
+					star bootstrap
+			#navbar-collapse-1.collapse.navbar-collapse
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href="#services") services
+					li
+						a(href="#portfolio") portfolio
+					li
+						a(href="#about") about
+					li
+						a(href="#team") team
+					li
+						a(href="#contact") contact
+	header
+		.container
+			h1 welcome to our studio
+			p it's nice to meet you
+			a(href="#services") tell me more
+	section#services
+		.container
+			.row
+				.col-xs-12
+					h2 services
+					p.subtitulo #{subtitulo}
+			.row
+				.col-xs-4.servicios
+					span.fa-stack.fa-5x
+						i.fa.fa-circle.fa-stack-5x
+						i.fa.fa-shopping-cart.fa-inverse.fa-stack-4x
+					h5 e-commerce
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos rerum temporibus quas ad, asperiores veritatis, facere expedita optio est a.
+				.col-xs-4.servicios
+					span.fa-stack.fa-5x
+						i.fa.fa-circle.fa-stack-5x.text-
+						i.fa.fa-laptop.fa-inverse.fa-stack-4x
+					h5 responsive design
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis perferendis ullam nisi, totam tempora accusamus itaque pariatur error excepturi aliquam!
+				.col-xs-4.servicios
+					span.fa-stack.fa-5x
+						i.fa.fa-circle.fa-stack-5x.text-
+						i.fa.fa-lock.fa-inverse.fa-stack-4x
+					h5 web security
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis asperiores esse deserunt dignissimos odio fuga mollitia dolor eveniet, ex, nulla.
+	section#portfolio
+		.container
+			.row
+				.col-xs-12
+					h2 portfolio
+					p.subtitulo #{subtitulo}
+			.row
+				.col-xs-12.col-sm-6.col-md-4
+					.portfolio-imagen
+						img(href="img/portfolio/roundicons.png")
+					.portfolio-proyecto
+						h5 round icons
+						p.proyecto graphic design
+				.col-xs-12.col-sm-6.col-md-4
+					.portfolio-imagen
+						img(href="img/portfolio/startup-framework.png")
+					.portfolio-proyecto
+						h5 startup framework
+						p.proyecto website design 
+				.col-xs-12.col-sm-6.col-md-4
+					.portfolio-imagen
+						img(href="img/portfolio/treehouse.png")
+					.portfolio-proyecto
+						h5 treehouse
+						p.proyecto website design
+				.col-xs-12.col-sm-6.col-md-4
+					.portfolio-imagen
+						img(href="img/portfolio/golden.png")
+					.portfolio-proyecto
+						h5 golden
+						p.proyecto website design
+				.col-xs-12.col-sm-6.col-md-4
+					.portfolio-imagen
+						img(href="img/portfolio/escape.png")
+					.portfolio-proyecto
+						h5 escape
+						p.proyecto website design
+				.col-xs-12.col-sm-6.col-md-4
+					.portfolio-imagen
+						img(href="img/portfolio/dreams.png")
+					.portfolio-proyecto
+						h5 dreams
+						p.proyecto website design
+	section#about
+		.container
+			.row
+				.col-xs-12
+					h2 about
+					p.subtitulo #{subtitulo}
+			#timeline
+				.timeline-block
+					.timeline-img
+						img(src="img/about/1.jpg", alt="picture")
+					.timeline-content
+						p.fecha 2009-2011
+						p.acontecimiento our humble beginnings
+						p #{textotimeline}
+				.timeline-block
+					.timeline-img
+						img(src="img/about/2.jpg", alt="picture")
+					.timeline-content
+						p.fecha march 2011
+						p.acontecimiento an agency is born
+						p #{textotimeline}
+				.timeline-block
+					.timeline-img
+						img(src="img/about/3.jpg", alt="picture")
+					.timeline-content
+						p.fecha december 2012
+						p.acontecimiento transition to full service
+						p #{textotimeline}
+				.timeline-block
+					.timeline-img
+						img(src="img/about/4.jpg", alt="picture")
+					.timeline-content
+						p.fecha july 2014
+						p.acontecimiento phase two expansion
+						p #{textotimeline}
+				.timeline-block
+					.timeline-img
+						p.endtimeline be part of our story
+	section#team
+		.container
+			.row
+				.col-xs-12
+					h2 about
+					p.subtitulo #{subtitulo}
+			.row
+				.col-xs-12.col-md-4
+					.fotoperfil
+						img(src="img/team/.jpg", alt="foto perfil equipo")
+					p.nombre
+					p.cargo
+					.redes
+						a(href="")
+
+
+
+
+
+	script(type="text/javascript" src="assets/js/jquery.js")
+	script(type="text/javascript" src="assets/js/bootstrap.js")
+	script(type="text/javascript" src="assets/js/agency.js")
