@@ -1,0 +1,54 @@
+html {
+	width: 100%;
+	min-height: 100%;
+}
+body {
+	@extend html;
+}
+header {
+	@extend html;
+}
+
+h1 {
+	font-family: $DroidSerif;
+	font-size: 40px;
+	color: #fff;
+	text-transform: capitalize;
+	text-align: center;
+	font-style: italic;
+}
+h2 {
+	font-family: $Montserrat;
+	font-size: 40px;
+	font-weight: 700;
+	color: $gray;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
+}
+h5 {
+	font-family: $Montserrat;
+	font-size: 18px;
+	font-weight: 700;
+	color: $gray;
+	text-transform: capitalize;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: initial;
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		text-decoration: none;
+	}
+}
+.subtitulo {
+	font-family: $DroidSerif;
+	font-size: 16px;
+	font-style: italic;
+	color: $middle-gray;
+	text-align: center;
+	margin-bottom: 60px;
+}

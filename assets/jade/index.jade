@@ -5,15 +5,59 @@ head
 	meta( name='viewport', content='width=device-width, initial-scale=1.0' )
 	title Agency Theme
 	link(href="https://fonts.googleapis.com/css?family=Kaushan+Script", rel="stylesheet", type="text/css")
+	link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700", rel="stylesheet", type="text/css")
+	link(href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic", rel="stylesheet", type="text/css")
+	link(href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300", rel="stylesheet", type="text/css")
 	link(href="assets/font-awesome/css/font-awesome.min.css", rel="stylesheet")
 	link(href="assets/css/bootstrap.css", rel="stylesheet")
 	link(href="assets/css/main.css", rel="stylesheet")
 body
 	-var textotimeline= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae."
 	-var subtitulo="Lorem ipsum dolor sit amet, consectetur."
-
-
-	nav.navbar.navbar-default.navbar-fixed-top
+	-var detalleservicio="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda natus esse facilis repellat possimus fuga maxime libero modi incidunt."
+	mixin inicioseccion(titulo)
+		h2= titulo
+		p.subtitulo= subtitulo
+	mixin iconoservicio(extra_classes)
+		-var default_classes = 'fa fa-inverse fa-stack-1x'
+		if extra_classes
+			-var classes = default_classes + ' ' + extra_classes
+		else
+			-var classes = default_classes
+		span.fa-stack.fa-4x
+			i.fa.fa-circle.fa-stack-2x
+			i(class=classes)
+	mixin sobreservicio(servicio)
+		h5= servicio
+		p= detalleservicio
+	mixin portfolio(src, tituloproyecto, clasificacion)
+		.project
+			.portfolio-imagen
+				img(src= src, alt="imagen proyecto")
+			.portfolio-proyecto
+				h5= tituloproyecto
+				p.proyecto= clasificacion
+	mixin hits(src, fecha, acontecimiento)
+		.timeline-block
+			.timeline-img
+				img(src= src, class="img-circle img-responsive" alt="picture")
+			.timeline-content
+				p.fecha= fecha
+				p.acontecimiento= acontecimiento
+				p= textotimeline
+	mixin redessociales()
+		.redes
+			a(href="#"): i.fa.fa-twitter
+			a(href="#"): i.fa.fa-facebook
+			a(href="#"): i.fa.fa-linkedin
+	mixin miembrosequipo(src, nombre, cargo)
+		.fotoperfil
+			img(src= src, class="img-circle" alt="foto perfil equipo")
+		p.nombre Kay Garland
+		p.cargo Lead Designer
+		block
+		+redessociales
+	nav.navbar.navbar-default.navbar-fixed-top.active
 		.container
 			.navbar-header
 				button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar-collapse-1")
@@ -43,128 +87,98 @@ body
 	section#services
 		.container
 			.row
-				.col-xs-12
-					h2 services
-					p.subtitulo #{subtitulo}
+				+inicioseccion("services")
 			.row
-				.col-xs-4.servicios
-					span.fa-stack.fa-5x
-						i.fa.fa-circle.fa-stack-5x
-						i.fa.fa-shopping-cart.fa-inverse.fa-stack-4x
-					h5 e-commerce
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos rerum temporibus quas ad, asperiores veritatis, facere expedita optio est a.
-				.col-xs-4.servicios
-					span.fa-stack.fa-5x
-						i.fa.fa-circle.fa-stack-5x.text-
-						i.fa.fa-laptop.fa-inverse.fa-stack-4x
-					h5 responsive design
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis perferendis ullam nisi, totam tempora accusamus itaque pariatur error excepturi aliquam!
-				.col-xs-4.servicios
-					span.fa-stack.fa-5x
-						i.fa.fa-circle.fa-stack-5x.text-
-						i.fa.fa-lock.fa-inverse.fa-stack-4x
-					h5 web security
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis asperiores esse deserunt dignissimos odio fuga mollitia dolor eveniet, ex, nulla.
+				.col-xs-12.col-md-4.servicios
+					+iconoservicio("fa-shopping-cart")
+					+sobreservicio("e-comerce")
+				.col-xs-12.col-md-4.servicios
+					+iconoservicio("fa-laptop")
+					+sobreservicio("responsive design")
+				.col-xs-12.col-md-4.servicios
+					+iconoservicio("fa-lock")
+					+sobreservicio("web security")
 	section#portfolio
 		.container
 			.row
-				.col-xs-12
-					h2 portfolio
-					p.subtitulo #{subtitulo}
+				+inicioseccion("portfolio")
 			.row
 				.col-xs-12.col-sm-6.col-md-4
-					.portfolio-imagen
-						img(href="img/portfolio/roundicons.png")
-					.portfolio-proyecto
-						h5 round icons
-						p.proyecto graphic design
+					+portfolio("img/portfolio/roundicons.png", "round icons", "graphic design")
 				.col-xs-12.col-sm-6.col-md-4
-					.portfolio-imagen
-						img(href="img/portfolio/startup-framework.png")
-					.portfolio-proyecto
-						h5 startup framework
-						p.proyecto website design 
+					+portfolio("img/portfolio/startup-framework.png", "startup framework", "website design")
 				.col-xs-12.col-sm-6.col-md-4
-					.portfolio-imagen
-						img(href="img/portfolio/treehouse.png")
-					.portfolio-proyecto
-						h5 treehouse
-						p.proyecto website design
+					+portfolio("img/portfolio/treehouse.png", "treehouse", "website design")
 				.col-xs-12.col-sm-6.col-md-4
-					.portfolio-imagen
-						img(href="img/portfolio/golden.png")
-					.portfolio-proyecto
-						h5 golden
-						p.proyecto website design
+					+portfolio("img/portfolio/golden.png", "golden", "website design")
 				.col-xs-12.col-sm-6.col-md-4
-					.portfolio-imagen
-						img(href="img/portfolio/escape.png")
-					.portfolio-proyecto
-						h5 escape
-						p.proyecto website design
+					+portfolio("img/portfolio/escape.png", "escape", "website design")
 				.col-xs-12.col-sm-6.col-md-4
-					.portfolio-imagen
-						img(href="img/portfolio/dreams.png")
-					.portfolio-proyecto
-						h5 dreams
-						p.proyecto website design
+					+portfolio("img/portfolio/dreams.png", "dreams", "website design")
 	section#about
 		.container
 			.row
-				.col-xs-12
-					h2 about
-					p.subtitulo #{subtitulo}
+				+inicioseccion("about")
 			#timeline
-				.timeline-block
-					.timeline-img
-						img(src="img/about/1.jpg", alt="picture")
-					.timeline-content
-						p.fecha 2009-2011
-						p.acontecimiento our humble beginnings
-						p #{textotimeline}
-				.timeline-block
-					.timeline-img
-						img(src="img/about/2.jpg", alt="picture")
-					.timeline-content
-						p.fecha march 2011
-						p.acontecimiento an agency is born
-						p #{textotimeline}
-				.timeline-block
-					.timeline-img
-						img(src="img/about/3.jpg", alt="picture")
-					.timeline-content
-						p.fecha december 2012
-						p.acontecimiento transition to full service
-						p #{textotimeline}
-				.timeline-block
-					.timeline-img
-						img(src="img/about/4.jpg", alt="picture")
-					.timeline-content
-						p.fecha july 2014
-						p.acontecimiento phase two expansion
-						p #{textotimeline}
+				+hits("img/about/1.jpg", "2009-2011", "our humble beginnings")
+				+hits("img/about/2.jpg", "march 2011", "an agency is born")
+				+hits("img/about/3.jpg", "december 2012", "transition to full service")
+				+hits("img/about/4.jpg", "july 2014", "phase two expansion")
 				.timeline-block
 					.timeline-img
 						p.endtimeline be part of our story
 	section#team
 		.container
 			.row
-				.col-xs-12
-					h2 about
-					p.subtitulo #{subtitulo}
+				+inicioseccion("our amazing team")
 			.row
 				.col-xs-12.col-md-4
-					.fotoperfil
-						img(src="img/team/.jpg", alt="foto perfil equipo")
-					p.nombre
-					p.cargo
-					.redes
-						a(href="")
-
-
-
-
-
+					+miembrosequipo("img/team/1.jpg", "Kay Garland", "Lead Designer")
+				.col-xs-12.col-md-4
+					+miembrosequipo("img/team/2.jpg", "Larry Parker", "Lead Marketer")
+				.col-xs-12.col-md-4
+					+miembrosequipo("img/team/3.jpg", "Diana Pertersen", "Lead Developer")
+			.row
+				p.team Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate numquam distinctio error dolore enim! Omnis explicabo cum ex eligendi, consequuntur nesciunt beatae, dolorem.
+	section#marcas
+		.container
+			.row
+				.col-xs-6.col-md-3
+					img(src="img/logos/envato.jpg", alt="logo envato")
+				.col-xs-6.col-md-3
+					img(src="img/logos/designmodo.jpg", alt="logo designmodo")
+				.col-xs-6.col-md-3
+					img(src="img/logos/themeforest.jpg", alt="logo themeforest")
+				.col-xs-6.col-md-3
+					img(src="img/logos/creative-market.jpg", alt="logo creative market")
+	section#contact
+		.container
+			.row
+				+inicioseccion("contact ur")
+			.row
+				.col-xs-12.col-md-6
+					form(action="")#usrform
+						input(type="text", name="name", value="", placeholder="YOUR NAME*")
+						input(type="text", name="email", value="", placeholder="YOUR EMAIL*")
+						input(type="text", name="phone", value="", placeholder="YOUR PHONE*")
+				.col-xs-12.col-md-6
+					textarea(name="message", placeholder="YOUR MESSAGE*", form="usrform")
+			.row
+				input(type="submit", value="SEND MESSAGE").send
+	footer
+		.container
+			.row
+				.col-xs-12.col-sm-4
+					p Copyright © Your Website 2014
+				.col-xs-12.col-sm-4
+					+redessociales
+				.col-xs-12.col-sm-4
+					a(href="#") Privacy Policy
+					a(href="#") Terms of Use
 	script(type="text/javascript" src="assets/js/jquery.js")
 	script(type="text/javascript" src="assets/js/bootstrap.js")
+	script(type="text/javascript" src="assets/js/jqBootstrapValidation.js")
+	script(type="text/javascript" src="assets/js/cbpAnimatedHeader.js")
+	script(type="text/javascript" src="assets/js/classie.js")
+	script(type="text/javascript" src="assets/js/contact_me.js")
 	script(type="text/javascript" src="assets/js/agency.js")
