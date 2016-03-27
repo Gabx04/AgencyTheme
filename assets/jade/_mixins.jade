@@ -1,0 +1,42 @@
+mixin inicioseccion(titulo)
+	h2= titulo
+	p.subtitulo= subtitulo
+mixin iconoservicio(extra_classes)
+	-var default_classes = 'fa fa-inverse fa-stack-1x'
+	if extra_classes
+		-var classes = default_classes + ' ' + extra_classes
+	else
+		-var classes = default_classes
+	span.fa-stack.fa-4x
+		i.fa.fa-circle.fa-stack-2x
+		i(class=classes)
+mixin sobreservicio(servicio)
+	h5= servicio
+	p= detalleservicio
+mixin portfolio(src, tituloproyecto, clasificacion)
+	.project
+		.portfolio-imagen
+			img(src= src, alt="imagen proyecto")
+		.portfolio-proyecto
+			h5= tituloproyecto
+			p.proyecto= clasificacion
+mixin hits(src, fecha, acontecimiento)
+	.timeline-block
+		.timeline-img
+			img(src= src, class="img-circle img-responsive" alt="picture")
+		.timeline-content
+			p.fecha= fecha
+			p.acontecimiento= acontecimiento
+			p.detallesacontecimiento= textotimeline
+mixin redessociales()
+	.redes
+		a(href="#"): i.fa.fa-twitter
+		a(href="#"): i.fa.fa-facebook
+		a(href="#"): i.fa.fa-linkedin
+mixin miembrosequipo(src, nombre, cargo)
+	.fotoperfil
+		img(src= src, class="img-circle" alt="foto perfil equipo")
+	p.nombre Kay Garland
+	p.cargo Lead Designer
+	block
+	+redessociales

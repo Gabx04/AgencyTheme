@@ -3,15 +3,57 @@
 	width: 100%;
 	background-color: transparent;
 	padding-top: 10px;
+	padding-bottom: 10px;
 	&.navbar-default {
 		border-color: transparent !important;
+		.navbar-nav {
+				li {
+					text-transform: uppercase;
+					font-family: $Montserrat;
+					font-size: 16px;
+					a {
+						color: #fff;
+						&:hover {
+							color: $yellow;
+							background-color: none;
 
+							}
+						&:focus {
+							color: $yellow;
+							background-color: none;
+
+							}
+					}
+					&.active {
+						a {
+							border-radius: 5px;
+							background-color: $yellow;
+							color: #fff;
+							&:hover {
+								color: #fff;			
+							}
+							&:focus {
+								color: #fff;			
+							}
+						}
+
+					}
+				}
+			}
+
+		&.navbar-shrink {
+			background-color: $black;
+		}
 	}
+
 	.navbar-brand {
 		font-family: $KaushanScript;
 		font-size: 24px;
 		color: $yellow;
 		text-transform: capitalize;
+		&:hover {
+			color: $yellow;
+			}
 		}
 	.navbar-toggle {
 		margin-top: 10px;
@@ -30,22 +72,33 @@
     		background-color: $yellow;
 		}
 	}
-	.navbar-nav {
-		li {
-			text-transform: uppercase;
-			font-family: $Montserrat;
-			font-size: 16px;
-		a {
-			color: #fff;
-			&:hover {
-				color: $yellow;
-				background-color: none;
+	@media (max-width: 767px) {
+		background-color: $black;
+		padding-top: 0;
+		padding-bottom: 0;
+		&.navbar-default {
+			.navbar-collapse {
+				border-color: transparent !important;
+			}
+			.navbar-nav {
+				li {
+					&.active {
+						a {
+							border-radius: 0;
+						}
+					}
 				}
 			}
 		}
+
 	}
-	
+	@media (max-width: 480px) {
+		.navbar-brand {
+			font-size: 20px;
+		}
+	}
 }
+
 header {
 	padding-top: 23%;
 	padding-bottom: 15%;
@@ -66,5 +119,15 @@ header {
 	a {
 		@include boton;
 		}
+	@media (max-width: 767px) {
+		padding-top: 30%;
+		padding-bottom: 30%;		
+		p {
+			font-size: 50px;
+			padding-bottom: 15px;
+		}
+
+	}
+
 
 }

@@ -13,26 +13,26 @@
   <link href="assets/css/main.css" rel="stylesheet"/>
 </head>
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top active">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">star bootstrap</a>
+      <div class="navbar-header page-scroll">
+        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#header" class="navbar-brand page-scroll">star bootstrap</a>
       </div>
       <div id="navbar-collapse-1" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#services">services</a></li>
-          <li><a href="#portfolio">portfolio</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#team">team</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#services" class="page-scroll">services</a></li>
+          <li><a href="#portfolio" class="page-scroll">portfolio</a></li>
+          <li><a href="#about" class="page-scroll">about</a></li>
+          <li><a href="#team" class="page-scroll">team</a></li>
+          <li><a href="#contact" class="page-scroll">contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <header>
+  <header id="header">
     <div class="container">
       <h1>welcome to our studio</h1>
-      <p>it's nice to meet you</p><a href="#services">tell me more</a>
+      <p>it's nice to meet you</p><a href="#services" class="page-scroll">tell me more</a>
     </div>
   </header>
   <section id="services">
@@ -127,13 +127,13 @@
           <h2>about</h2>
           <p class="subtitulo">Lorem ipsum dolor sit amet, consectetur.</p>
       </div>
-      <div id="timeline">
+      <div id="timeline" class="row">
           <div class="timeline-block">
             <div class="timeline-img"><img src="img/about/1.jpg" alt="picture" class="img-circle img-responsive"/></div>
             <div class="timeline-content">
               <p class="fecha">2009-2011</p>
               <p class="acontecimiento">our humble beginnings</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae.</p>
+              <p class="detallesacontecimiento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae.</p>
             </div>
           </div>
           <div class="timeline-block">
@@ -141,7 +141,7 @@
             <div class="timeline-content">
               <p class="fecha">march 2011</p>
               <p class="acontecimiento">an agency is born</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae.</p>
+              <p class="detallesacontecimiento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae.</p>
             </div>
           </div>
           <div class="timeline-block">
@@ -149,7 +149,7 @@
             <div class="timeline-content">
               <p class="fecha">december 2012</p>
               <p class="acontecimiento">transition to full service</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae.</p>
+              <p class="detallesacontecimiento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae.</p>
             </div>
           </div>
           <div class="timeline-block">
@@ -157,12 +157,12 @@
             <div class="timeline-content">
               <p class="fecha">july 2014</p>
               <p class="acontecimiento">phase two expansion</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae.</p>
+              <p class="detallesacontecimiento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aperiam iure placeat. Facere rem at quas ad, pariatur quae repellat molestiae. Omnis porro molestiae, accusamus reiciendis itaque sint labore repudiandae.</p>
             </div>
           </div>
         <div class="timeline-block">
           <div class="timeline-img">
-            <p class="endtimeline">be part of our story</p>
+            <p class="endtimeline">be part of our story!</p>
           </div>
         </div>
       </div>
@@ -175,19 +175,19 @@
           <p class="subtitulo">Lorem ipsum dolor sit amet, consectetur.</p>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-4 text-center">
             <div class="fotoperfil"><img src="img/team/1.jpg" alt="foto perfil equipo" class="img-circle"/></div>
             <p class="nombre">Kay Garland</p>
             <p class="cargo">Lead Designer</p>
               <div class="redes"><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-4 text-center">
             <div class="fotoperfil"><img src="img/team/2.jpg" alt="foto perfil equipo" class="img-circle"/></div>
             <p class="nombre">Kay Garland</p>
             <p class="cargo">Lead Designer</p>
               <div class="redes"><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-4 text-center">
             <div class="fotoperfil"><img src="img/team/3.jpg" alt="foto perfil equipo" class="img-circle"/></div>
             <p class="nombre">Kay Garland</p>
             <p class="cargo">Lead Designer</p>
@@ -202,32 +202,32 @@
   <section id="marcas">
     <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-3"><img src="img/logos/envato.jpg" alt="logo envato"/></div>
-        <div class="col-xs-6 col-md-3"><img src="img/logos/designmodo.jpg" alt="logo designmodo"/></div>
-        <div class="col-xs-6 col-md-3"><img src="img/logos/themeforest.jpg" alt="logo themeforest"/></div>
-        <div class="col-xs-6 col-md-3"><img src="img/logos/creative-market.jpg" alt="logo creative market"/></div>
+        <div class="col-xs-12 col-sm-6 col-md-3 text-center"><a href="#"><img src="img/logos/envato.jpg" alt="logo envato"/></a></div>
+        <div class="col-xs-12 col-sm-6 col-md-3 text-center"><a href="#"><img src="img/logos/designmodo.jpg" alt="logo designmodo"/></a></div>
+        <div class="col-xs-12 col-sm-6 col-md-3 text-center"><a href="#"><img src="img/logos/themeforest.jpg" alt="logo themeforest"/></a></div>
+        <div class="col-xs-12 col-sm-6 col-md-3 text-center"><a href="#"><img src="img/logos/creative-market.jpg" alt="logo creative market"/></a></div>
       </div>
     </div>
   </section>
   <section id="contact">
     <div class="container">
       <div class="row">
-          <h2>contact ur</h2>
+          <h2>contact us</h2>
           <p class="subtitulo">Lorem ipsum dolor sit amet, consectetur.</p>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-6 col-contact">
           <form action="" id="usrform">
             <input type="text" name="name" value="" placeholder="YOUR NAME*"/>
             <input type="text" name="email" value="" placeholder="YOUR EMAIL*"/>
             <input type="text" name="phone" value="" placeholder="YOUR PHONE*"/>
           </form>
         </div>
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-6 col-contact">
           <textarea name="message" placeholder="YOUR MESSAGE*" form="usrform"></textarea>
         </div>
       </div>
-      <div class="row">
+      <div class="row text-center">
         <input type="submit" value="SEND MESSAGE" class="send"/>
       </div>
     </div>
@@ -235,21 +235,22 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-4">
-          <p>Copyright © Your Website 2014</p>
+        <div class="col-xs-12 col-sm-4 col-footer">
+          <p class="credits">Copyright © Your Website 2014</p>
         </div>
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-4 col-footer">
             <div class="redes"><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
         </div>
-        <div class="col-xs-12 col-sm-4"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+        <div class="col-xs-12 col-sm-4 col-footer"><a href="#" class="info">Privacy Policy</a><a href="#" class="info">Terms of Use</a></div>
       </div>
     </div>
   </footer>
-  <script type="text/javascript" src="assets/js/jquery.js"></script>
-  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-  <script type="text/javascript" src="assets/js/jqBootstrapValidation.js"></script>
-  <script type="text/javascript" src="assets/js/cbpAnimatedHeader.js"></script>
-  <script type="text/javascript" src="assets/js/classie.js"></script>
-  <script type="text/javascript" src="assets/js/contact_me.js"></script>
-  <script type="text/javascript" src="assets/js/agency.js"></script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/classie.js"></script>
+  <script src="assets/js/cbpAnimatedHeader.js"></script>
+  <script src="assets/js/jqBootstrapValidation.js"></script>
+  <script src="assets/js/contact_me.js"></script>
+  <script src="assets/js/agency.js"></script>
 </body>
